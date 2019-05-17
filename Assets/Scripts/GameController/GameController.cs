@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	// Use this for initialization
-	void Update () {
-        if (Input.GetKeyDown("P"))
-        {
-            PauseGame();
-        }
+
+
+
+    int actualLevel;
+    float timeRemaining;
+
+    public void Init()
+    {
+        actualLevel = 0;
+        timeRemaining = 31;
+    }
+    void Update () {
+        timeRemaining -= Time.deltaTime;
+        HudController.main.time = timeRemaining;
+        if (Input.GetKeyDown(KeyCode.P))
+             PauseGame();
+        
 	}
 	
 	
@@ -17,4 +28,9 @@ public class GameController : MonoBehaviour {
         Time.timeScale = 0;
 		
 	}
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+
+    }
 }
