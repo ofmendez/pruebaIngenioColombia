@@ -14,8 +14,8 @@ public class GameController : MonoBehaviour {
     bool immune;
     bool gameOver;
 
-    int durLevel = 10;
-    int amountHorde = 3;
+    int durLevel = 30;
+    int amountHorde = 10;
     float incSpeed = 0.2f;
 
     void Start () { 
