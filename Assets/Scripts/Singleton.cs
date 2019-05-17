@@ -22,7 +22,9 @@ public class Singleton<Instance> : MonoBehaviour where Instance : Singleton<Inst
 			if(!main) {
 				main = this as Instance;
 			} else {
-				DestroyObject(gameObject);
+				// DestroyObject(gameObject);
+				Object.Destroy(gameObject);
+				// gameObject.Destroy;
 			}
 			DontDestroyOnLoad(gameObject);
 		} else {

@@ -24,22 +24,7 @@ namespace Invector.CharacterController
         }
 
         public virtual void Jump()
-
        {
-            /*
-            // conditions to do this action
-            bool jumpConditions = isGrounded && !isJumping;
-            // return if jumpCondigions is false
-            if (!jumpConditions) return;
-            // trigger jump behaviour
-            jumpCounter = jumpTimer;            
-            isJumping = true;
-            // trigger jump animations            
-            if (_rigidbody.velocity.magnitude < 1)
-                animator.CrossFadeInFixedTime("Jump", 0.1f);
-            else
-                animator.CrossFadeInFixedTime("JumpMove", 0.2f);
-                */
         }
 
         public virtual void RotateWithAnotherTransform(Transform referenceTransform)
